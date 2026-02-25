@@ -33,6 +33,28 @@ function removerPatolino() {
 removerPatolino()
 
 function adicionarFrajola() {
+    let gangue = ["Pernalonga", "Lola"];
 
+    if (gangue.length >= 2) {
+        gangue.push("Frajola");
+    }
+
+    return gangue;
 }
+
+console.log(adicionarFrajola());
+
+function filtrarPorPHeVogais() {
+    let vogais = ['a', 'e', 'i', 'o', 'u']
+    let personagens = ["ronaldo", "Taz", "Fraude", "Patolino", "Piu-Piu"]
+
+    let filtrados = personagens.filter(nome => 
+        nome[0] === "P" && 
+        vogais.includes(nome[nome.length - 1].toLowerCase())
+    )
+
+    return filtrados
+}
+
+console.log(filtrarPorPHeVogais())
 
